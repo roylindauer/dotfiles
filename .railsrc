@@ -1,0 +1,8 @@
+--database=postgresql
+--skip-javascript
+--skip-action-cable
+--css=tailwindcss
+--skip-test
+--skip-system-test 
+--force
+--template=~/dotfiles/src/rails-template.rb

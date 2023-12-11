@@ -1,0 +1,42 @@
+[user]
+	name = Roy Lindauer
+	email = 1851879+roylindauer@users.noreply.github.com
+
+[alias]
+    changes=diff --name-status -r
+    diffstat=diff --stat -r
+    log1=log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    log2=log --oneline
+    llog=log --date=local
+    new=!sh -c 'git log $1@{1}..$1@{0} "$@"'
+    ci=commit
+    cs=commit -S
+    s=status
+    br=branch
+    co=checkout
+    branches=branch -a
+    tags=tag --list
+    remotes=remote -v
+    prunejuice=remote prune origin
+
+[core]
+    excludesfile = ~/.gitignore_global
+
+[mergetool]
+    keepBackup = false
+    prompt = false
+[mergetool "git-merge-tool"]
+    cmd = git-merge-tool "$LOCAL" "$BASE" "$REMOTE" "$MERGED"
+    trustExitCode = true
+[merge]
+    tool = git-merge-tool
+
+[difftool "git-diff-tool"]
+    cmd = git-diff-tool "$LOCAL" "$REMOTE" "$MERGED"
+[difftool]
+    prompt = false
+[diff]
+    tool = git-diff-tool
+
+[pull]
+    rebase = false
