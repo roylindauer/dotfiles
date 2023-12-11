@@ -5,4 +5,4 @@
 --skip-test
 --skip-system-test 
 --force
---template=~/dotfiles/src/rails-template.rb
+--template=~/rails-template.rb
