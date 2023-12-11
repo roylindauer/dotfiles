@@ -23,8 +23,8 @@ if [ -f $HOME/.secrets ]; then
     source $HOME/.secrets
 fi
 
-if [ -f $HOME/.bash_aliases ]; then
-    source $HOME/.bash_aliases
+if [ -f $HOME/.aliases ]; then
+    source $HOME/.aliases
 fi
 
 # ssh-agent
