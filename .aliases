@@ -1,3 +1,4 @@
+# LINUXY
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias h='history | tail'
@@ -6,14 +7,13 @@ alias l='ls -CFG'
 alias la='ls -AG'
 alias ll='ls -alFG'
 alias lt='ls -altrG' #sort newest last
-
 alias recall='history | grep'
-alias docker-wp='docker-compose run wordpress wp --allow-root'
 
-alias myip="ip -br -c a"
-
+# DOCKER
 alias dcp="docker-compose"
-alias gitclean='git br --merged | grep -v "\*" | xargs -n 1 git branch -d'
-alias gitnuke='git br | grep -v "\*" | xargs -n 1 git branch -D'
-
 alias dps='docker ps --format "table {{.ID}}\t {{.Names}}\t {{.Status}}\t {{.Image}}\t {{.Command}}"'
+
+# GIT
+alias gitcleanall='git br --merged | grep -v "\*" | xargs -n 1 git branch -d'
+alias gitnuke='git br | grep -v "\*" | xargs -n 1 git branch -D'
+alias gitclean='git br --merged | egrep -v "(^\*|master|production|development|develop|qa|staging|main)" | xargs git br -d'
