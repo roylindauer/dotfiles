@@ -74,5 +74,5 @@ Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 
