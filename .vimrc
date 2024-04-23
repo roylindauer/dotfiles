@@ -62,6 +62,9 @@ endif
 set listchars=eol:$,nbsp:_,tab:>-,trail:~,extends:>,precedes:<
 set list
 
+set nu
+set relativenumber
+
 syntax on
 filetype plugin indent on
 colorscheme monokai
