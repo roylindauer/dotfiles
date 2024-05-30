@@ -98,7 +98,7 @@ ZSH_THEME="gianu"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws terraform ruby ssh-agent)
+plugins=(git aws terraform ruby ssh-agent composer)
 
 source $ZSH/oh-my-zsh.sh
 
