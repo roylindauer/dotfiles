@@ -5,7 +5,6 @@ export DOTFILES_OS=`uname | awk '{print tolower($0)}'`
 
 PATHDIRS=(
   $HOME/bin
-  "/Applications/Sublime Text.app/Contents/SharedSupport/bin"
 )
 
 alias mvim=/Applications/MacVim.app/Contents/bin/mvim
@@ -110,7 +109,7 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 #Preferred editor for local and remote sessions
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -126,6 +125,10 @@ export EDITOR='vim'
 
 function new-branch() {
   git co -b "roylindauer/$1"
+}
+
+function code() {
+    codium "$HOME/code/$1"
 }
 
 export IRCNAME=ecso
