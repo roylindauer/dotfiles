@@ -127,9 +127,28 @@ function new-branch() {
   git co -b "roylindauer/$1"
 }
 
+# Open a directory from the ~/code directory in my editor IF it exists
 function code() {
-    codium "$HOME/code/$1"
+    local project_dir=~/code/$1
+    if [ -d "$project_dir" ]; then
+      nvim "$project_dir"
+    else
+      echo "Project '$1' not found in ~/code"
+    fi
 }
+
+# Code Completion Function. List all directories in ~/code and provide them as completions
+_code_complete() {
+  local projects
+  projects=(~/code/*(/))  # Get the list of directories in ~/code
+  projects=(${projects##*/})  # Extract only the directory names
+
+  _describe 'project' projects
+}
+
+# The compdef _code_complete code line links the _code_complete function to the code command
+# so that when you type code <tab>, the completions are provided by _code_complete.
+compdef _code_complete code
 
 export IRCNAME=ecso
 export IRCUSER=ecso
