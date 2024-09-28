@@ -1,5 +1,5 @@
 gem_group :development, :test do
-  gem "debug", ">= 1.0.0", platforms: %i[mri mingw x64_mingw]
+  gem "debug" 
 
   # Optional other debugging tools
   # gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
@@ -38,9 +38,9 @@ end
 
 gem_group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara", ">= 3.26"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+#  gem "capybara", ">= 3.26"
+#  gem "selenium-webdriver"
+#  gem "webdrivers"
 
   # Clean database during tests
   gem "database_cleaner-active_record"
@@ -56,7 +56,7 @@ if yes? 'Do you wish to generate a root controller? (y/n)'
 end
 
 generate "rspec:install"
-generate "tailwindcss:install"
+#generate "tailwindcss:install"
 
 rubocop_yml = <<-EOL
 require: standard
