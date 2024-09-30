@@ -1,6 +1,4 @@
 gem_group :development, :test do
-  gem "debug" 
-
   # Optional other debugging tools
   # gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # gem "pry-rails

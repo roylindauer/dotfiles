@@ -8,6 +8,7 @@ alias la='ls -AG'
 alias ll='ls -alFG'
 alias lt='ls -altrG' #sort newest last
 alias recall='history | grep'
+alias n="nvim"
 
 # DOCKER
 alias dcp="docker-compose"
