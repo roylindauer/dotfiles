@@ -1,5 +1,6 @@
---database=postgresql
 --skip-test
 --skip-system-test 
+--asset-pipeline=propshaft
+--css=tailwind
 --force
 --template=~/rails-template.rb

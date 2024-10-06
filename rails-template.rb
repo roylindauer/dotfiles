@@ -5,8 +5,6 @@ gem_group :development, :test do
 
   gem "annotate", "~> 3.2"
   gem "letter_opener_web", "~> 2.0"
-  gem "standard", require: false
-  gem "erb_lint", require: false
 
   # Security tooling to
   # gem "brakeman"
@@ -18,12 +16,6 @@ gem_group :development, :test do
   gem "factory_bot_rails"
   gem "faker"
   gem "rspec-rails", "~> 6.0.0"
-
-  # Rubocop
-  gem "rubocop", "~> 1.39", require: false
-  gem "rubocop-performance", "~> 1.15", require: false
-  gem "rubocop-rails", require: false
-  gem "rubocop-rspec", "~> 2.14", require: false
 end
 
 gem_group :development do
@@ -32,6 +24,9 @@ gem_group :development do
 
   # A fully configurable and extendable Git hook manager
   gem "overcommit", require: false
+
+  # Rubocop
+  gem "rubocop-rails-omakase", require: false
 end
 
 gem_group :test do
@@ -54,13 +49,14 @@ if yes? 'Do you wish to generate a root controller? (y/n)'
 end
 
 generate "rspec:install"
-#generate "tailwindcss:install"
+generate "tailwindcss:install"
 
 rubocop_yml = <<-EOL
 require: standard
 
 inherit_gem:
-  standard: config/base.yml
+  rubocop-rails-omakase: rubocop.yml
 EOL
 
 create_file ".rubocop.yml", rubocop_yml
+
