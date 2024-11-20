@@ -192,3 +192,4 @@ export PATH="$GOPATH/bin:$PATH"
 
 eval "$(direnv hook zsh)"
 
+eval "$(/Users/roylindauer/.local/bin/mise activate zsh)"
