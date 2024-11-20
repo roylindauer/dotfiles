@@ -189,6 +189,6 @@ export PATH="$GOPATH/bin:$PATH"
 # export PATH="$PATH:$HOME/.rvm/bin"
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# ASDF
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+eval "$(direnv hook zsh)"
 
