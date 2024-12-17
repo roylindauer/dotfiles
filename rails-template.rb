@@ -51,6 +51,7 @@ end
 
 rails_command "rspec:install"
 rails_command "css:tailwind:install"
+rails_command "javascript:install:esbuild"
 
 rubocop_yml = <<-EOL
 require: standard
