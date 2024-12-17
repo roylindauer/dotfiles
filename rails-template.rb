@@ -4,6 +4,7 @@ gem_group :development, :test do
   # gem "pry-rails
 
   # incompatible with rails 8
+  # lets move to https://github.com/drwl/annotaterb 
   # gem "annotate", "~> 3.2"
   gem "letter_opener_web", "~> 2.0"
 
@@ -50,8 +51,10 @@ if yes? 'Do you wish to generate a root controller? (y/n)'
 end
 
 rails_command "rspec:install"
-rails_command "css:tailwind:install"
+rails_command "css:install:tailwind"
 rails_command "javascript:install:esbuild"
+rails_command "stimulus:install"
+rails_command "turbo:install"
 
 rubocop_yml = <<-EOL
 require: standard
