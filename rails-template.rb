@@ -3,7 +3,8 @@ gem_group :development, :test do
   # gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # gem "pry-rails
 
-  gem "annotate", "~> 3.2"
+  # incompatible with rails 8
+  # gem "annotate", "~> 3.2"
   gem "letter_opener_web", "~> 2.0"
 
   # Security tooling to
@@ -26,7 +27,7 @@ gem_group :development do
   gem "overcommit", require: false
 
   # Rubocop
-  gem "rubocop-rails-omakase", require: false
+  #gem "rubocop-rails-omakase", require: false
 end
 
 gem_group :test do
@@ -48,8 +49,8 @@ if yes? 'Do you wish to generate a root controller? (y/n)'
   route "resource :#{name}, controller: :#{name}, only: [:show]"
 end
 
-generate "rspec:install"
-generate "tailwindcss:install"
+rails_command "rspec:install"
+rails_command "css:tailwind:install"
 
 rubocop_yml = <<-EOL
 require: standard
