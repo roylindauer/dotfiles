@@ -2,5 +2,6 @@
 --skip-system-test 
 --asset-pipeline=propshaft
 --css=tailwind
+--javascript=esbuild
 --force
 --template=~/rails-template.rb
