@@ -3,9 +3,7 @@ gem_group :development, :test do
   # gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # gem "pry-rails
 
-  # incompatible with rails 8
-  # lets move to https://github.com/drwl/annotaterb 
-  # gem "annotate", "~> 3.2"
+  gem "annotaterb"
   gem "letter_opener_web", "~> 2.0"
 
   # Security tooling to
